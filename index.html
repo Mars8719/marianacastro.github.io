@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_index.css')}}'>
+    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_p_index.css')}}'>
+</head>
+<body>
+    <div class = "content">
+        <nav class = "Menu">
+            <section class="menu__container bg-light d-flex justify-content-center">
+                <h1 href="index.html" class="menu__logo">Portafolio</h1>
+                <ul class="menu_links">
+                    <li class="menu_item">
+                        <a href="index.html" class="menu_link">Home</a>
+                    </li>
+                    <li class="menu_item menu_item--sh">
+                        <a href="#" class="menu_link">Secciones<img src='{{url_for('static', filename="/svgs/arrow.svg")}}' class=" menu__arrow"></a>
+                        <ul class="menu_n">
+                            <li class="menu_inside">
+                                <a href="/contacto" class="menu_link menu_link--m_ins">Contacto</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>    
+                <div class="menu_hamburger">
+                    <img src='{{url_for('static', filename="/svgs/menu.svg")}}' class="menu_img">
+                </div>    
+            </section>
+        </nav>
+        <header class="hero">
+            <section class="hero_container">
+                <div class="container_hero">
+                    <div class="hero_texts">
+                        <h2 class="hero_title"> Bienvenidos a Mi Portafolio Profesional</h2>
+                        <h3 class="hero_subtitle">Mi nombre es Mariana Castro y soy <span class="text"><br></span></h3>
+                        <a href="/contacto" class="hero_cta">Contactame ahora</a>
+                    </div>
+                </div>
+            </section>
+            <div class="hero_wave" style=" overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.00,49.85 C150.00,149.60 349.20,-49.85 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
+        </header>
+        <main>
+            <section class="presentation container_hero">
+                <img src='{{url_for('static', filename="/imgs/mv.jpg")}}' class="presentation_pic">
+                <h2 class="subtitle">Sobre mi</h2>
+                <p class="presentation_copy mb-0 p-2 fs-6 navbar-expand-lg bg-body-tertiary">Soy un profesional con experiencia sólida en el desarrollo de software, destacando en el frontend, backend, y la integración de API's. Mi habilidad para crear interfaces de usuario atractivas y funcionales, junto con la capacidad de diseñar y desarrollar API's eficientes, ha sido esencial en proyectos exitosos. Mi enfoque en la eficiencia en el backend ha resultado en sistemas confiables y de alto rendimiento. Además, poseo experiencia en la creación de diagramas UML para la planificación y comunicación efectiva de proyectos.</p>
+            <section class="about container_hero">
+                <div class="about_texts">
+                    <h2 class="subtitle">Portafolio</h2>
+                    <ol>
+                        <li> Gestion de proyectos</li>
+                        <li> Desarrollo de Aplicaciones web</li>
+                        <li> Integración de API's </li>
+                        <li> Diseño de Diagramas UML </li>
+                    </ol>
+                    <a href="https://gitlab.com/Mars8719" class="hero_bta">Mas Proyectos</a>
+                </div>
+                <figure class="about_img about_img--left">
+                    <img src='{{url_for('static', filename="/imgs/medio.jpg")}}' class="about_picture">
+                </figure>
+            </section>
+            <section>
+                <h2 class="subtitle">Mis habilidades</h2> 
+                <div class="Skill">
+                    <ul style="list-style: none;">
+                        <li>
+                            <label for="file">HTML</label> <i class="fa-brands fa-html5" style="color: #ff9500;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="85">85%</progress>
+                        </li>
+                        <li>
+                            <label for="file">CSS</label> <i class="fa-brands fa-css3-alt" style="color: #548ef2;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="50">50%</progress>
+                        </li>
+                        <li>
+                            <label for="file">Javascript</label> <i class="fa-brands fa-js" style="color: #fff700;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="20">20%</progress>
+                        </li>
+                        <li>
+                            <label for="file">PHP</label> <i class="fa-brands fa-php" style="color: #5d00ff;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="20">20%</progress>
+                        </li>
+                        <li>
+                            <label for="file">SQL</label> <i class="fa-solid fa-database" style="color: #86b2fd;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="80">80%</progress>
+                        </li>
+                        <li>
+                            <label for="file">Python</label> <i class="fa-brands fa-python" style="color: #002566;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="70">70%</progress>
+                        </li>
+                        <li>
+                            <label for="file">Java</label> <i class="fa-brands fa-java" style="color: #e21212;"></i>
+                        </li>
+                        <li>
+                            <progress id="file" max="100" value="70">70%</progress>
+                        </li>
+                    </ul>
+                </div>
+            </section> 
+        </main>
+        <footer>
+            <div class="container_hero footer_grid">
+                <nav class="nav--footer">
+                    <a class="nav_items nav_items--footer" href="/">Home</a>
+                    <a class="nav_items nav_items--footer" href="/contacto">Contactame</a>
+                </nav>
+                <section class="footer_contact">
+                    <h3 class="footer_title">Redes Sociales</h3>
+                    <div class="footer_icons">
+                        <span class="footer_container-icons"> 
+                            <a class="fa-brands fa-linkedin footer_icon" style="color: #000000;" href="https://www.linkedin.com/in/mariana-castro-662a2232b/"></a>
+                        </span>
+                        <span class="footer_container-icons">
+                            <a class="fa-brands fa-instagram footer_icon" style="color: #000000;" href="https://www.instagram.com/spirit_free1987/"></a>
+                        </span>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <script defer src="https://kit.fontawesome.com/28fcc82ee2.js" crossorigin="anonymous"></script>
+    <script src='{{url_for('static', filename='Javascript/app.js')}}'></script>
+    <script src='{{url_for('static', filename='Javascript/texto.js')}}'></script>
+    </div>
+</body>
+</html>
