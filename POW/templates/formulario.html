@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario de contacto</title>
+    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_index.css')}}'>
+    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_formulario.css')}}'>
+    <link rel="stylesheet" href='{{url_for('static', filename='CSS/estilo_p_index.css')}}'>
+</head>
+
+<body>
+    <div class = "content">
+            <nav class = "Menu">
+                <section class="menu__container">
+                    <h1 class="menu__logo">Portafolio</h1>
+                    <ul class="menu_links">
+                        <li class="menu_item">
+                            <a href="/" class="menu_link">Home</a>
+                        </li>
+                        <li class="menu_item menu_item--sh">
+                            <a href="#" class="menu_link">Secciones <img src='{{url_for('static', filename="/svgs/arrow.svg")}}' class=" menu__arrow"></a>
+                            
+                            <ul class="menu_n">
+                                <li class="menu_inside">
+                                    <a href="/contacto" class="menu_link menu_link--m_ins">Contacto</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>    
+                    <div class="menu_hamburger">
+                        <img src='{{url_for('static', filename="/svgs/menu.svg")}}' class="menu_img">
+                    </div>    
+                </section>
+            </nav>
+            <h2>Gracias por llegar a la seccion de contacto</h2>
+                <form class="contact" action=mailto:marianacastropalacio@gmail.com method="GET">
+                    <div class="input-group">
+                        <input type="text" id="nombre" name="nombre" class="text-box" placeholder="Nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" class="text-box" placeholder="Correo electronico" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="mensaje" id="mensaje" name="mensaje" placeholder="Mensaje que desea Enviar" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="submit" value="Send" name="submit" class="send-btn" id="sendTo">
+                    </div>
+                    <div class="input-group">
+                        <input type="reset" value="Delete">
+                    </div>
+                </form>
+    </div>
+    <footer>
+        <div class="container_hero footer_grid">
+            <nav class="nav--footer">
+                <a class="nav_items nav_items--footer" href="/">Home</a>
+                <a class="nav_items nav_items--footer" href="/contacto">Contactame</a>
+            </nav>
+            <section class="footer_contact">
+                <h3 class="footer_title">Redes Sociales</h3>
+                <div class="footer_icons">
+                    <span class="footer_container-icons">
+                        <a class="fa-brands fa-whatsapp footer_icon" style="color: #000000;" href="#"></a>
+                    </span>
+                    <span class="footer_container-icons">
+                        <a class="fa-brands fa-instagram footer_icon" style="color: #000000;" href="#"></a>
+                    </span>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script defer src="https://kit.fontawesome.com/28fcc82ee2.js" crossorigin="anonymous"></script>
+    <script src='{{url_for('static', filename='Javascript/app.js')}}'></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("sendTo").addEventListener("click", function() {
+        var campo1 = document.getElementById("nombre").value;
+        var campo2 = document.getElementById("email").value;
+        var campo3 = document.getElementById("mensaje").value;
+        var mensaje = "Campo 1: " + campo1 + "\nCampo 2: " + campo2 + "\nCampo 3: " + campo3;
+        var confirmacion = confirm("¿Estás seguro de enviar este formulario?\n\n" + mensaje);
+    });
+});
+    </script>
+</body>
+</html>
